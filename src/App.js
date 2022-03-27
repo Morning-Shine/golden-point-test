@@ -1,13 +1,16 @@
 import React from "react";
 import styled from "@emotion/styled";
 import { BrowserRouter } from "react-router-dom";
-import AppRouter from "./components/AppRouter";
+import AppRouter from "./components/AppRouter"; 
+import ContactDev from "./dev/ContactDev";
+
 
 export default function App() {
   return (
     <BrowserRouter>
       <StyledApp>
         <AppRouter />
+        <ContactDev/>
       </StyledApp>
     </BrowserRouter>
   );
