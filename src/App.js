@@ -1,25 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import styled from "@emotion/styled";
+import { BrowserRouter } from "react-router-dom";
+import AppRouter from "./components/AppRouter";
 
-function App() {
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <StyledApp>
+        <AppRouter />
+      </StyledApp>
+    </BrowserRouter>
   );
 }
 
-export default App;
+const StyledApp = styled.div`
+  background: linear-gradient(52deg, #0a1c7a 0%, #34a5d8 75%, #7cbfde 100%);
+  height: 80vh;
+  max-height: 100vh;
+  padding-top: 10vh;
+  padding-bottom: 10vh;
+`;
